@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block page_content %}
+    <div class="s130">
+        <p>
+        <h2>Węzły wejściowe:<br>
+            {% for en in entries %}
+                 {{en}}
+            {% endfor %}
+            <br>
+            <br>
+            Węzły im podobobne to:
+            <br>
+        {% for sim in similarities %}
+                 {{sim}} <br>
+            {% endfor %}
+        </h2>
+        </p>
+
+    </div>
+
+
+
+{% endblock %}
