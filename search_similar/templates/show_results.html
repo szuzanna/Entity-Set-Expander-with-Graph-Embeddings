@@ -3,21 +3,38 @@
 {% load static %}
 {% block page_content %}
     <div class="s130">
-        <p>
-        <h2>Węzły wejściowe:<br>
+        <div class="inner-form">
+            <div class="input-field first-wrap">
+        <h1><u>Węzły wejściowe:</u></h1>
+        <!-- <p>
             {% for en in entries %}
-                 {{en}}
+                 {{en}}<br>
             {% endfor %}
-            <br>
-            <br>
-            Węzły im podobobne to:
-            <br>
-        {% for sim in similarities %}
-                 {{sim}} <br>
+        </p> -->
+        <table>
+            {% for en in entries %}
+                <tr><td>{{en}}</td></tr>
             {% endfor %}
-        </h2>
-        </p>
+        </table>
+        </div>
 
+        <div >
+            <h1><u>Węzły im podobobne to:</u></h1>
+        <!-- <p> 
+        {% for sim, metric in similarities %}
+                 {{sim }} {{  metric}}<br>
+            {% endfor %}
+
+        </p> -->
+        <table>
+            {% for sim, metric in similarities %}
+            <tr>
+                <td>{{sim}} </td>
+                <td>{{metric|stringformat:".4f"}}</td>
+            </tr>
+            {% endfor %}
+          </table>
+        </div>
     </div>
 
 
