@@ -14,6 +14,9 @@ source venv/Scripts/activate
 python manage.py runserver
 ```
 3. Otwieramy stronę http://127.0.0.1:8000 w przegladarce, gdzie wpisujemy po przecinku słowa, dla których chcemy znaleźć wyrazy podobne w oparciu o wektory osadzeń.
-TODO: Wstawić zdjęcie strony startowej.
+![Strona startowa](search.png)
 4. Po wciśnięciu przycisku "SEARCH" zostaniemy przeniesieni na stronę prezentującą 10 nabardziej podobnych do słów podanych na wejściu.
-TODO: Wstawić zdjęcie z wynikami.
+![Strona zawierająca wyniki wyszukiwania](results.png)
+
+## Zamiana modelu
+TODO:
